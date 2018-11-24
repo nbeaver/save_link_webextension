@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Generate Link",
+  "version": "0.1",
+  "description": "Generates a client-side redirect pointing to the current tab.",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon.svg",
+    "default_title": "Generate a link"
+  },
+  "background": {
+    "scripts": ["generate_link.js"]
+  }
+}
