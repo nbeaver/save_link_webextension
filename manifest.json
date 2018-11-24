@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
   "name": "Generate Link",
-  "version": "0.1",
   "description": "Generates a client-side redirect pointing to the current tab.",
+  "manifest_version": 2,
+  "version": "0.1",
   "icons": {
     "48": "icons/icon.svg",
     "96": "icons/icon.svg"
