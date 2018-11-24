@@ -1,21 +1,21 @@
-function f() {
+function generateLink() {
   // This is the code that actually gets executed by the bookmarklet.
-  function createRedirectHTML(URL, title) {
+  function createRedirectHTML(myURL, myTitle) {
     var newHTML = document.createElement('html');
     var newHead = document.createElement('head');
     var newTitle = document.createElement('title');
-    newTitle.text = title;
+    newTitle.text = myTitle;
     var newMeta = document.createElement('meta');
     newMeta.httpEquiv = "refresh";
     newMeta.setAttribute("charset", "utf-8");
-    newMeta.content = "0;url=" + URL;
+    newMeta.content = "0;url=" + myURL;
     var newBody = document.createElement('body');
     var newPar = document.createElement('p');
     var before = document.createTextNode('Loading ');
     var after = document.createTextNode('...');
     var newAnchor = document.createElement('a');
-    newAnchor.href = URL;
-    newAnchor.text = title;
+    newAnchor.href = myURL;
+    newAnchor.text = myTitle;
     newPar.appendChild(before);
     newPar.appendChild(newAnchor);
     newPar.appendChild(after);
@@ -26,12 +26,13 @@ function f() {
     newHTML.append(newBody);
     return newHTML
   }
-  var tempAnchor = window.document.createElement('a');
-  var newHTML = createRedirectHTML(document.location, document.title);
+  var tempAnchor = document.createElement('a');
+  var newHTML = createRedirectHTML(Tab.url, Tab.title);
   HTMLBlob = new Blob([newHTML.outerHTML], {type: 'text/html'});
-  tempAnchor.href = window.URL.createObjectURL(HTMLBlob);
-  var hostname = window.location.hostname;
-  var filename = 'link-to-' + document.title + '_' + hostname + '.link.html';
+  tempAnchor.href = URL.createObjectURL(HTMLBlob);
+  //var hostname = window.location.hostname;
+  var hostname = 'temp hostname'
+  var filename = 'link-to-' + Tab.title + '_' + hostname + '.link.html';
   filename = filename.split(' ').join('_');
   tempAnchor.download = filename
   tempAnchor.style.display = 'none';
@@ -39,7 +40,7 @@ function f() {
   tempAnchor.click();
   document.body.removeChild(tempAnchor);
 }
-// This is the code that sets up the bookmarklet.
-document.getElementById("bookmarklet").href = "javascript:(" + f.toString() + ")();"
-// https://juhukinners.wordpress.com/2009/01/08/how-to-write-a-bookmarklet/
-// TODO: check length limits? 
+/*
+Add generateLink() as a listener to clicks on the browser action.
+*/
+browser.browserAction.onClicked.addListener(generateLink);
