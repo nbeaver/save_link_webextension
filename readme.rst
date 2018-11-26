@@ -24,8 +24,8 @@ Unfortunately, the defaults are not cross-platform;
 Linux has Link type desktop files,
 Microsoft Windows has `Internet Shortcuts`_,
 and Mac OS X has
-`webloc<https://apple.stackexchange.com/questions/258033/how-to-change-the-default-application-for-webloc-files>`_
-`files<https://blog.scottlowe.org/2016/12/21/opening-webloc-files-ubuntu/>`_.
+`webloc <https://apple.stackexchange.com/questions/258033/how-to-change-the-default-application-for-webloc-files>`_
+`files <https://blog.scottlowe.org/2016/12/21/opening-webloc-files-ubuntu/>`_.
 They are all mutually incompatible.
 
 .. _Internet Shortcuts: https://docs.microsoft.com/en-us/windows/desktop/lwef/internet-shortcuts
