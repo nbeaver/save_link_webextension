@@ -1,4 +1,5 @@
 Generate an HTML stub file linking to the current tab.
+======================================================
 
 GitHub repository here:
 
@@ -15,6 +16,7 @@ https://addons.mozilla.org/en-US/firefox/addon/save-link-to-current-tab/
 - Description: This saves a cross-platform link to the current tab as an HTML stub file. The redirect is performed using a meta refresh. It does *not* save a copy of the current page. 
 
 Questions & Answers
+-------------------
 
 - What is this for?
 
