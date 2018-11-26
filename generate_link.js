@@ -25,18 +25,22 @@ function generateLink(tab) {
     newHTML.append(newBody);
     return newHTML;
   }
-  var tempAnchor = document.createElement('a');
+  function parseURL(URL) {
+    var newAnchor = document.createElement('a');
+    newAnchor.href = tab.url;
+    return newAnchor;
+  }
   var payload = createRedirectHTML(tab.url, tab.title);
   var HTMLBlob = new Blob([payload.outerHTML], {type: 'text/html'});
-  tempAnchor.href = URL.createObjectURL(HTMLBlob);
-  //var hostname = window.location.hostname;
-  var hostname = 'temp hostname'
-  var filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
-  filename = filename.split(' ').join('_');
-  tempAnchor.download = filename
-  tempAnchor.style.display = 'none';
-  document.body.appendChild(tempAnchor);
-  tempAnchor.click();
-  document.body.removeChild(tempAnchor);
+  var myURL = URL.createObjectURL(HTMLBlob);
+  var hostname = parseURL(tab.url).hostname
+  var link_filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
+  link_filename = link_filename.split(' ').join('_');
+  var downloading = browser.downloads.download({
+    url: myURL,
+    filename : link_filename,
+    conflictAction: 'uniquify',
+    saveAs: true
+  });
 }
 browser.browserAction.onClicked.addListener(generateLink);
