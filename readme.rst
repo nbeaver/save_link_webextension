@@ -52,6 +52,21 @@ Yes, the WebCuts extension appears to do this for Chrome browsers.
 
 https://chrome.google.com/webstore/detail/webcuts/kehckhdcknjaadegmihldoedmdfmpcmk
 
+However, this extension relies on Javascript.
+
+- Why not use Javascript to change ``window.location.href``?
+
+Not everyone uses a browser with Javascript enabled.
+There are many reasons why.
+
+https://www.wired.com/2015/11/i-turned-off-javascript-for-a-whole-week-and-it-was-glorious/
+
+https://blockmetry.com/blog/javascript-disabled
+
+https://www.smashingmagazine.com/2018/05/using-the-web-with-javascript-turned-off/
+
+https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript
+
 - What permissions does this extension need, and why?
 
 We need ``activeTab`` permissions to access the tab title and URL.
