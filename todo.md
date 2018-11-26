@@ -1,0 +1,3 @@
+- [ ] Upload to Github
+- [ ] Upload to addons.mozilla.org
+- [ ] Remove `/` from filenames.
