@@ -23,13 +23,15 @@ Questions & Answers
 Sometimes it's useful to save a link to a webpage as a file
 that can be copied and moved around.
 Unfortunately, the defaults are not cross-platform;
-Linux has Link type desktop files,
+Linux has `Link type desktop files`_,
 Microsoft Windows has `Internet Shortcuts`_,
 and Mac OS X has
 `webloc <https://apple.stackexchange.com/questions/258033/how-to-change-the-default-application-for-webloc-files>`_
 `files <https://blog.scottlowe.org/2016/12/21/opening-webloc-files-ubuntu/>`_.
-They are all mutually incompatible.
+They are all mutually
+`incompatible <https://saidulhassan.com/open-url-files-in-linux-mint-ubuntu-1029>`_.
 
+.. _Link type desktop files: https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s06.html
 .. _Internet Shortcuts: https://docs.microsoft.com/en-us/windows/desktop/lwef/internet-shortcuts
 
 Fortunately, there is an alternative:
