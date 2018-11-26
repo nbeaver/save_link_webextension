@@ -1,10 +1,54 @@
-Generate a link using HTTP redirect.
+Generate an HTML stub file linking to the current tab.
 
 GitHub repository here:
 
 https://github.com/nbeaver/save_link_webextension
 
-Q & A
+Hosted on addons.mozilla.org here:
+
+- Name: Save link to current tab
+
+- Summary: Generates an HTML stub file that links to the current tab.
+
+- Description: This saves a cross-platform link to the current tab as an HTML stub file. The redirect is performed using a meta refresh. It does *not* save a copy of the current page. 
+
+Questions & Answers
+
+- What is this for?
+
+Sometimes it's useful to save a link to a webpage as a file
+that can be copied and moved around.
+Unfortunately, the defaults are not cross-platform;
+Linux has Link type desktop files,
+Microsoft Windows has `Internet Shortcuts`_,
+and Mac OS X has
+`webloc<https://apple.stackexchange.com/questions/258033/how-to-change-the-default-application-for-webloc-files>`_
+`files<https://blog.scottlowe.org/2016/12/21/opening-webloc-files-ubuntu/>`_.
+They are all mutually incompatible.
+
+.. _Internet Shortcuts: https://docs.microsoft.com/en-us/windows/desktop/lwef/internet-shortcuts
+
+Fortunately, there is an alternative:
+use an HTML stub file and tell the browser itself to perform the redirect.
+
+https://superuser.com/questions/538089/how-to-create-cross-platform-internet-shortcut-files
+
+- How does this work?
+
+It uses the meta tag in an HTML file
+to perform a client-side redirect.
+
+https://www.w3.org/TR/WCAG20-TECHS/H76.html
+
+https://en.wikipedia.org/wiki/Meta_refresh
+
+https://stackoverflow.com/questions/5411538/redirect-from-an-html-page
+
+- Has this been done already?
+
+Yes, the WebCuts extension appears to do this for Chrome browsers.
+
+https://chrome.google.com/webstore/detail/webcuts/kehckhdcknjaadegmihldoedmdfmpcmk
 
 - What permissions does this extension need, and why?
 
