@@ -1,4 +1,4 @@
-- [ ] Upload to Github
-- [ ] Upload to addons.mozilla.org
+- [x] Upload to Github
+- [x] Upload to addons.mozilla.org
 - [ ] Remove `/` from filenames.
 - [ ] Make it compatible with the chromium browser.
