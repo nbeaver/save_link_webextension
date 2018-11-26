@@ -15,14 +15,15 @@ Q & A
 - Why not just use a bookmarklet?
 
 Because `Content Security Policy`_ (CSP)
-`prevents bookmarklets`_ `from running`_ on `some pages`_,
+`prevents`_ `bookmarklets`_ `from running`_ on `some pages`_,
 such as this one:
 
 https://sourceware.org/gdb/onlinedocs/gdb/index.html
 
 .. _Content Security Policy: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 
-.. _prevents bookmarklets: https://medium.com/making-instapaper/bookmarklets-are-dead-d470d4bbb626
+.. _prevents: https://medium.com/making-instapaper/bookmarklets-are-dead-d470d4bbb626
+.. _bookmarklets: https://stackoverflow.com/questions/7607605/does-content-security-policy-block-bookmarklets
 .. _from running: http://jcardy.co.uk/the-slow-death-of-bookmarklets/
 .. _some pages: https://blog.github.com/2013-04-19-content-security-policy/
 
