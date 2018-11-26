@@ -1,5 +1,13 @@
 Generate a link using HTTP redirect.
 
+GitHub repository here:
+
+https://github.com/nbeaver/save_link_webextension
+
+Q & A
+
+- What permissions does this extension need, and why?
+
 We need ``activeTab`` permissions to access the tab title and URL.
 
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission
@@ -9,8 +17,6 @@ We need ``download`` permissions to download the generated HTML file.
 https://stackoverflow.com/questions/53474726/generating-html-in-webextension-results-in-this-mdialog-is-null-and-cant-acc/
 
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download#Examples
-
-Q & A
 
 - Why not just `use a bookmarklet`_?
 
