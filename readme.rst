@@ -9,7 +9,7 @@ Hosted on addons.mozilla.org here:
 
 https://addons.mozilla.org/en-US/firefox/addon/save-link-to-current-tab/
 
-- Name: Save link to current tab
+- Name: Save a link to the current tab
 
 - Summary: Generates an HTML stub file that links to the current tab.
 
