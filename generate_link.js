@@ -1,5 +1,4 @@
-function generateLink() {
-  // This is the code that actually gets executed by the bookmarklet.
+function generateLink(tab) {
   function createRedirectHTML(myURL, myTitle) {
     var newHTML = document.createElement('html');
     var newHead = document.createElement('head');
@@ -24,15 +23,15 @@ function generateLink() {
     newHead.appendChild(newTitle);
     newHTML.append(newHead);
     newHTML.append(newBody);
-    return newHTML
+    return newHTML;
   }
   var tempAnchor = document.createElement('a');
-  var newHTML = createRedirectHTML(Tab.url, Tab.title);
-  HTMLBlob = new Blob([newHTML.outerHTML], {type: 'text/html'});
+  var payload = createRedirectHTML(tab.url, tab.title);
+  var HTMLBlob = new Blob([payload.outerHTML], {type: 'text/html'});
   tempAnchor.href = URL.createObjectURL(HTMLBlob);
   //var hostname = window.location.hostname;
   var hostname = 'temp hostname'
-  var filename = 'link-to-' + Tab.title + '_' + hostname + '.link.html';
+  var filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
   filename = filename.split(' ').join('_');
   tempAnchor.download = filename
   tempAnchor.style.display = 'none';
@@ -40,7 +39,4 @@ function generateLink() {
   tempAnchor.click();
   document.body.removeChild(tempAnchor);
 }
-/*
-Add generateLink() as a listener to clicks on the browser action.
-*/
 browser.browserAction.onClicked.addListener(generateLink);
