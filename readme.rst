@@ -12,7 +12,9 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downl
 
 Q & A
 
-- Why not just use a bookmarklet?
+- Why not just `use a bookmarklet`_?
+
+.. _use a bookmarklet: https://support.mozilla.org/en-US/kb/bookmarklets-perform-common-web-page-tasks
 
 Because `Content Security Policy`_ (CSP)
 `prevents`_ `bookmarklets`_ `from running`_ on `some pages`_,
