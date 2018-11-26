@@ -30,17 +30,21 @@ function generateLink(tab) {
     newAnchor.href = tab.url;
     return newAnchor;
   }
+  function getFilename(tab) {
+    var hostname = parseURL(tab.url).hostname
+    var filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
+    filename = filename.split(' ').join('_');
+    return filename
+  }
   var payload = createRedirectHTML(tab.url, tab.title);
-  var HTMLBlob = new Blob([payload.outerHTML], {type: 'text/html'});
-  var myURL = URL.createObjectURL(HTMLBlob);
-  var hostname = parseURL(tab.url).hostname
-  var link_filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
-  link_filename = link_filename.split(' ').join('_');
+  var paylodBlob = new Blob([payload.outerHTML], {type: 'text/html'});
+  var payloadURL = URL.createObjectURL(paylodBlob);
+  var payload_filename = getFilename(tab);
   var downloading = browser.downloads.download({
-    url: myURL,
-    filename : link_filename,
+    url: payloadURL,
+    filename : payload_filename,
     conflictAction: 'uniquify',
-    saveAs: true
+    saveAs: true,
   });
 }
 browser.browserAction.onClicked.addListener(generateLink);
