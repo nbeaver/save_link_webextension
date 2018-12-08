@@ -30,10 +30,21 @@ function generateLink(tab) {
     newAnchor.href = tab.url;
     return newAnchor;
   }
+  function sanitizeFilename(filename) {
+      return filename.replace(/</g, "(")
+                     .replace(/>/g, ")")
+                     .replace(/"/g, "'")
+                     .replace(/[\\/]+/g, "_")
+                     .replace(/[\u200e\u200f\u202a-\u202e]/g, "")
+                     .replace(/[\x00-\x1f\x7f-\x9f:*?|"<>;,+=\[\]]+/g, " ")
+                     .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, "");
+  }
+  // https://searchfox.org/mozilla-central/source/toolkit/components/downloads/DownloadPaths.jsm#68
   function getFilename(tab) {
     var hostname = parseURL(tab.url).hostname
     var filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
     filename = filename.split(' ').join('_');
+    filename = sanitizeFilename(filename);
     return filename
   }
   var payload = createRedirectHTML(tab.url, tab.title);
