@@ -2,3 +2,4 @@
 - [x] Upload to addons.mozilla.org
 - [x] Remove `/` from filenames.
 - [ ] Make it compatible with the chromium browser.
+- [ ] Make it compatible with Firefox for Android
