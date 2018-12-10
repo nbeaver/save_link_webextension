@@ -31,13 +31,14 @@ function generateLink(tab) {
     return newAnchor;
   }
   function sanitizeFilename(filename) {
-      return filename.replace(/</g, "(")
-                     .replace(/>/g, ")")
-                     .replace(/"/g, "'")
+      return filename.replace(/</g, "_")
+                     .replace(/>/g, "_")
+                     .replace(/"/g, "_")
+                     .replace(/'/g, "_")
                      .replace(/[\\/]+/g, "_")
-                     .replace(/[\u200e\u200f\u202a-\u202e]/g, "")
-                     .replace(/[\x00-\x1f\x7f-\x9f:*?|"<>;,+=\[\]]+/g, " ")
-                     .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, "");
+                     .replace(/[\u200e\u200f\u202a-\u202e]/g, "_")
+                     .replace(/[\x00-\x1f\x7f-\x9f:*?|"<>;,+=\[\]]+/g, "_")
+                     .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, "_");
   }
   // https://searchfox.org/mozilla-central/source/toolkit/components/downloads/DownloadPaths.jsm#68
   function getFilename(tab) {
