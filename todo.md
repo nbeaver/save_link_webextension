@@ -3,6 +3,7 @@
 - [x] Remove `/` from filenames.
 - [ ] Make a corpus of HTML files with different titles to test it on.
 - [ ] Make it work on right-clicked URLs
+- [ ] Test to make sure it works with URL fragments
 
 Lower priority
 
