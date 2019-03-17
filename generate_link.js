@@ -7,7 +7,7 @@ function generateLink(tab) {
     var newMeta = document.createElement('meta');
     newMeta.httpEquiv = "refresh";
     newMeta.setAttribute("charset", "utf-8");
-    newMeta.content = "0;url=" + myURL;
+    newMeta.content = "0; url=" + myURL;
     var newBody = document.createElement('body');
     var newPar = document.createElement('p');
     var before = document.createTextNode('Loading ');
