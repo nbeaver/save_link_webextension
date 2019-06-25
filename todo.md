@@ -3,6 +3,7 @@
 - [x] Remove `/` from filenames.
 - [x] Make a corpus of HTML files with different titles and encodings to test it on.
 - [x] Test to make sure it works with URL fragments
+- [ ] Add URL fragment to filename? (useful for links to different anchors on the same page)
 
 Lower priority
 
