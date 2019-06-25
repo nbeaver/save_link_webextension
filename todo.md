@@ -2,7 +2,7 @@
 - [x] Upload to addons.mozilla.org
 - [x] Remove `/` from filenames.
 - [x] Make a corpus of HTML files with different titles and encodings to test it on.
-- [ ] Test to make sure it works with URL fragments
+- [x] Test to make sure it works with URL fragments
 
 Lower priority
 
