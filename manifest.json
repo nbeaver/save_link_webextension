@@ -1,6 +1,6 @@
 {
-  "name": "Generate Link",
-  "description": "Generates a client-side redirect pointing to the current tab.",
+  "name": "Save a link to the current tab",
+  "description": "Save an HTML file that links to the current tab.",
   "manifest_version": 2,
   "version": "0.1.2",
   "icons": {
@@ -13,7 +13,7 @@
   ],
   "browser_action": {
     "default_icon": "icons/icon.svg",
-    "default_title": "Generate a link"
+    "default_title": "Save a link"
   },
   "background": {
     "scripts": ["generate_link.js"]
