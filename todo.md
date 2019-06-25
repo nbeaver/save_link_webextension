@@ -2,10 +2,10 @@
 - [x] Upload to addons.mozilla.org
 - [x] Remove `/` from filenames.
 - [ ] Make a corpus of HTML files with different titles to test it on.
-- [ ] Make it work on right-clicked URLs
 - [ ] Test to make sure it works with URL fragments
 
 Lower priority
 
+- [ ] Make it work on right-clicked URLs (problem: can't get title easily)
 - [ ] Make it compatible with the chromium browser.
 - [ ] Make it compatible with Firefox for Android
