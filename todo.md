@@ -1,7 +1,7 @@
 - [x] Upload to Github
 - [x] Upload to addons.mozilla.org
 - [x] Remove `/` from filenames.
-- [ ] Make a corpus of HTML files with different titles to test it on.
+- [x] Make a corpus of HTML files with different titles and encodings to test it on.
 - [ ] Test to make sure it works with URL fragments
 
 Lower priority
