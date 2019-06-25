@@ -4,6 +4,9 @@
 - [x] Make a corpus of HTML files with different titles and encodings to test it on.
 - [x] Test to make sure it works with URL fragments
 - [ ] Add URL fragment to filename? (useful for links to different anchors on the same page)
+- [ ] Add an item to the right-click context menu
+    - <https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus>
+    - <https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items>
 
 Lower priority
 
