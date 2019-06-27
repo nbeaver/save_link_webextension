@@ -1,0 +1,1 @@
+Click the "Save a link" icon in the toolbar to download a link to the current tab.

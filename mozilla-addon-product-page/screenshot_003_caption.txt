@@ -1,0 +1,1 @@
+To use the link file later, just open it as you would a regular HTML file.

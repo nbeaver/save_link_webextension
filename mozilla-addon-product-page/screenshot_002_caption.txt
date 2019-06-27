@@ -1,0 +1,1 @@
+The link file is a small HTML file that you can save anywhere on your disk. Use the default filename or modify it as you wish.
