@@ -1,14 +1,13 @@
 function generateLink(tab) {
   function createRedirectHTML(myURL, myTitle) {
-    var newHTML = document.createElement('html');
-    var newHead = document.createElement('head');
-    var newTitle = document.createElement('title');
-    newTitle.text = myTitle;
+    var doc = document.implementation.createHTMLDocument(myTitle);
+
     var newMeta = document.createElement('meta');
     newMeta.httpEquiv = "refresh";
     newMeta.setAttribute("charset", "utf-8");
     newMeta.content = "0; url=" + myURL;
-    var newBody = document.createElement('body');
+    doc.head.appendChild(newMeta);
+
     var newPar = document.createElement('p');
     var before = document.createTextNode('Loading ');
     var after = document.createTextNode('...');
@@ -18,12 +17,10 @@ function generateLink(tab) {
     newPar.appendChild(before);
     newPar.appendChild(newAnchor);
     newPar.appendChild(after);
-    newBody.appendChild(newPar);
-    newHead.appendChild(newMeta);
-    newHead.appendChild(newTitle);
-    newHTML.append(newHead);
-    newHTML.append(newBody);
-    return newHTML;
+
+    doc.body.appendChild(newPar);
+
+    return doc;
   }
   function parseURL(URL) {
     var newAnchor = document.createElement('a');
@@ -49,7 +46,9 @@ function generateLink(tab) {
     return filename
   }
   var payload = createRedirectHTML(tab.url, tab.title);
-  var paylodBlob = new Blob([payload.outerHTML], {type: 'text/html'});
+  var serializer = new XMLSerializer();
+  var HTMLString = serializer.serializeToString(payload);
+  var paylodBlob = new Blob([HTMLString], {type: 'text/html'});
   var payloadURL = URL.createObjectURL(paylodBlob);
   var payload_filename = getFilename(tab);
   var downloading = browser.downloads.download({
