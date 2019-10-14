@@ -2,7 +2,7 @@
   "name": "Save a link to the current tab",
   "description": "Save an HTML file that links to the current tab.",
   "manifest_version": 2,
-  "version": "0.1.3",
+  "version": "0.2.0",
   "icons": {
     "48": "icons/icon.svg",
     "96": "icons/icon.svg"
