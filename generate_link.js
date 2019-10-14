@@ -3,9 +3,9 @@ function generateLink(tab) {
     var doc = document.implementation.createHTMLDocument(myTitle);
 
     var newMeta = document.createElement('meta');
-    newMeta.httpEquiv = "refresh";
-    newMeta.setAttribute("charset", "utf-8");
-    newMeta.content = "0; url=" + myURL;
+    newMeta.httpEquiv = 'refresh';
+    newMeta.setAttribute('charset', 'utf-8');
+    newMeta.content = '0; url=' + myURL;
     doc.head.appendChild(newMeta);
 
     var newPar = document.createElement('p');
@@ -28,22 +28,22 @@ function generateLink(tab) {
     return newAnchor;
   }
   function sanitizeFilename(filename) {
-      return filename.replace(/</g, "_")
-                     .replace(/>/g, "_")
-                     .replace(/"/g, "_")
-                     .replace(/'/g, "_")
-                     .replace(/[\\/]+/g, "_")
-                     .replace(/[\u200e\u200f\u202a-\u202e]/g, "_")
-                     .replace(/[\x00-\x1f\x7f-\x9f:*?|"<>;,+=\[\]]+/g, "_")
-                     .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, "_");
+      return filename.replace(/</g, '_')
+                     .replace(/>/g, '_')
+                     .replace(/"/g, '_')
+                     .replace(/'/g, '_')
+                     .replace(/[\\/]+/g, '_')
+                     .replace(/[\u200e\u200f\u202a-\u202e]/g, '_')
+                     .replace(/[\x00-\x1f\x7f-\x9f:*?|"<>;,+=\[\]]+/g, '_')
+                     .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, '_');
   }
   // https://searchfox.org/mozilla-central/source/toolkit/components/downloads/DownloadPaths.jsm#68
   function getFilename(tab) {
-    var hostname = parseURL(tab.url).hostname
+    var hostname = parseURL(tab.url).hostname;
     var filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
     filename = filename.split(' ').join('_');
     filename = sanitizeFilename(filename);
-    return filename
+    return filename;
   }
   var payload = createRedirectHTML(tab.url, tab.title);
   var serializer = new XMLSerializer();
@@ -53,7 +53,7 @@ function generateLink(tab) {
   var payload_filename = getFilename(tab);
   var downloading = browser.downloads.download({
     url: payloadURL,
-    filename : payload_filename,
+    filename: payload_filename,
     conflictAction: 'uniquify',
     saveAs: true,
   });
