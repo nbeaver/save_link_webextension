@@ -48,8 +48,8 @@ function generateLink(tab) {
   var payload = createRedirectHTML(tab.url, tab.title);
   var serializer = new XMLSerializer();
   var HTMLString = serializer.serializeToString(payload);
-  var paylodBlob = new Blob([HTMLString], {type: 'text/html'});
-  var payloadURL = URL.createObjectURL(paylodBlob);
+  var payloadBlob = new Blob([HTMLString], {type: 'text/html'});
+  var payloadURL = URL.createObjectURL(payloadBlob);
   var payload_filename = getFilename(tab);
   var downloading = browser.downloads.download({
     url: payloadURL,
