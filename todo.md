@@ -8,6 +8,13 @@
 - [ ] Add an item to the right-click context menu
     - <https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus>
     - <https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items>
+- [ ] Use `URL.revokeObjectURL` to free memory once the download has completed (`downloadDelta.state.current === 'complete'`).
+    - <https://gist.github.com/tkrkt/44949fe3f0cac2040c3ce3004fe1fe9c#file-download-js-L35>
+    - <https://bugzilla.mozilla.org/show_bug.cgi?id=1271345>
+    - <https://bugzilla.mozilla.org/show_bug.cgi?id=1521308>
+    - <https://hg.mozilla.org/mozilla-central/file/1325e2a34dfca0ff84f269d010cfc9830b0f101d/toolkit/components/extensions/test/mochitest/test_chrome_ext_downloads_saveAs.html>
+    - <https://github.com/eight04/image-picka/blob/8196221de1732210f42f6faa60bd8e44cde594b0/extension/background/download.js>
+    - <https://github.com/jacobmischka/ics-merger-screenshot-plugin/blob/c1179b3326c2e17aa40183122632d4b4e9e78aef/src/background.js>
 
 Lower priority
 
