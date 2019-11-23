@@ -75,7 +75,8 @@ https://www.smashingmagazine.com/2018/05/using-the-web-with-javascript-turned-of
 
 https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript
 
-- What permissions does this extension need, and why?
+What permissions does this extension need, and why?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We need ``activeTab`` permissions to access the tab title and URL.
 
@@ -87,7 +88,8 @@ https://stackoverflow.com/questions/53474726/generating-html-in-webextension-res
 
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download#Examples
 
-- Why not just `use a bookmarklet`_?
+Why not just `use a bookmarklet`_?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _use a bookmarklet: https://support.mozilla.org/en-US/kb/bookmarklets-perform-common-web-page-tasks
 
