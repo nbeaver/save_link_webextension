@@ -18,7 +18,8 @@ https://addons.mozilla.org/en-US/firefox/addon/save-link-to-current-tab/
 Questions & Answers
 -------------------
 
-- What is this for?
+What is this for?
+~~~~~~~~~~~~~~~~~
 
 Sometimes it's useful to save a link to a webpage as a file
 that can be copied and moved around.
@@ -39,7 +40,8 @@ use an HTML stub file and tell the browser itself to perform the redirect.
 
 https://superuser.com/questions/538089/how-to-create-cross-platform-internet-shortcut-files
 
-- How does this work?
+How does this work?
+~~~~~~~~~~~~~~~~~~~
 
 It uses the meta tag in an HTML file
 to perform a client-side redirect.
@@ -50,7 +52,8 @@ https://en.wikipedia.org/wiki/Meta_refresh
 
 https://stackoverflow.com/questions/5411538/redirect-from-an-html-page
 
-- Has this been done already?
+Has this been done already?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Yes, the WebCuts extension appears to do this for Chrome browsers.
 
@@ -58,7 +61,8 @@ https://chrome.google.com/webstore/detail/webcuts/kehckhdcknjaadegmihldoedmdfmpc
 
 However, this extension relies on Javascript.
 
-- Why not use Javascript to change ``window.location.href``?
+Why not use Javascript to change ``window.location.href``?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Not everyone uses a browser with Javascript enabled.
 There are many reasons why.
