@@ -5,7 +5,7 @@
 - [x] Test to make sure it works with URL fragments
 - [ ] Add URL fragment to filename? (useful for links to different anchors on the same page)
 - [ ] Add naked link to loading screen to it's apparent exactly where the page is redirecting.
-- [ ] Add an item to the right-click context menu
+- [ ] Add an item to the right-click context menu (useful when the addon toolbar is not visible when e.g. Javascript uses `window.open`)
     - <https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus>
     - <https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items>
 - [ ] Use `URL.revokeObjectURL` to free memory once the download has completed (`downloadDelta.state.current === 'complete'`).
