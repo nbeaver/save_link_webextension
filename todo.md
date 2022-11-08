@@ -17,6 +17,8 @@
     - <https://github.com/jacobmischka/ics-merger-screenshot-plugin/blob/c1179b3326c2e17aa40183122632d4b4e9e78aef/src/background.js>
 - [ ] Make it work on Emoji surrogate pairs
     - <https://emojipedia.org/man-farmer/>
+- [ ] Make it work on plain image URLs
+    - <https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Birthday_Paradox.svg/1024px-Birthday_Paradox.svg.png>
 
 Lower priority
 
