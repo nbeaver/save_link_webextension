@@ -15,6 +15,8 @@
     - <https://hg.mozilla.org/mozilla-central/file/1325e2a34dfca0ff84f269d010cfc9830b0f101d/toolkit/components/extensions/test/mochitest/test_chrome_ext_downloads_saveAs.html>
     - <https://github.com/eight04/image-picka/blob/8196221de1732210f42f6faa60bd8e44cde594b0/extension/background/download.js>
     - <https://github.com/jacobmischka/ics-merger-screenshot-plugin/blob/c1179b3326c2e17aa40183122632d4b4e9e78aef/src/background.js>
+- [ ] Make it work on Emoji surrogate pairs
+    - <https://emojipedia.org/man-farmer/>
 
 Lower priority
 
