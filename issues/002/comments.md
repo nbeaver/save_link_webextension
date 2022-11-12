@@ -1,0 +1,1 @@
+I agree that this would be highly useful, but most of the ways I can think of to customize the filename involve free-text input and parsing, which could get very complicated very quickly, so I don't plan on adding this feature until I can find a way that is reasonably simple and robust.
