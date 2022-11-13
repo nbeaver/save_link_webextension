@@ -21,6 +21,8 @@
     - <https://stackoverflow.com/questions/61801645/web-extension-code-to-download-file-works-in-chrome-but-fails-in-firefox-with-i>
 - [x] Make it work on plain image URLs
     - <https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Birthday_Paradox.svg/1024px-Birthday_Paradox.svg.png>
+- [ ] Handle filename sanitizing like SingleFile
+    - <https://github.com/gildas-lormeau/SingleFile/blob/911dd7e699fa9818c18320219dba414423156005/src/core/bg/download-util.js>
 
 Lower priority
 
