@@ -36,7 +36,8 @@ function generateLink(tab) {
                      .replace(/[\u200e\u200f\u202a-\u202e]/g, '_')
                      .replace(/[\x00-\x1f\x7f-\x9f:*?|"<>;,+=\[\]]+/g, '_')
                      .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, '_')
-                     .replace(/\p{So}\u{200D}\p{So}/gu, '');
+                     .replace(/\p{So}\u{200D}\p{So}/gu, '')
+                     .replace(/\u00A0/g, ' ');
   }
   // https://searchfox.org/mozilla-central/source/toolkit/components/downloads/DownloadPaths.jsm#68
   function getFilename(tab) {
