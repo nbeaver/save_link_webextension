@@ -36,9 +36,9 @@ function generateLink(tab) {
                      .replace(/[\u200e\u200f\u202a-\u202e]/g, '_')
                      .replace(/[\x00-\x1f\x7f-\x9f:*?|"<>;,+=\[\]]+/g, '_')
                      .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, '_')
-                     .replace(/[\uFE00-\uFE0F]/g, '')
-                     .replace(/\u200D/g, '')
-                     .replace(/\u00A0/g, ' ');
+                     .replace(/[\uFE00-\uFE0F]/g, '') // variation selectors
+                     .replace(/\u200D/g, '') // zero-width joiner
+                     .replace(/\u00A0/g, ' '); // no -break space
   }
   // https://searchfox.org/mozilla-central/source/toolkit/components/downloads/DownloadPaths.jsm#68
   function getFilename(tab) {
