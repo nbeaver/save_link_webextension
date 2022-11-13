@@ -15,11 +15,11 @@
     - <https://hg.mozilla.org/mozilla-central/file/1325e2a34dfca0ff84f269d010cfc9830b0f101d/toolkit/components/extensions/test/mochitest/test_chrome_ext_downloads_saveAs.html>
     - <https://github.com/eight04/image-picka/blob/8196221de1732210f42f6faa60bd8e44cde594b0/extension/background/download.js>
     - <https://github.com/jacobmischka/ics-merger-screenshot-plugin/blob/c1179b3326c2e17aa40183122632d4b4e9e78aef/src/background.js>
-- [ ] Make it work on Emoji surrogate pairs ("Error: filename must not contain illegal characters")
+- [x] Make it work on Emoji surrogate pairs ("Error: filename must not contain illegal characters")
     - <https://emojipedia.org/man-farmer/>
     - <https://stackoverflow.com/questions/73036830/sanitise-unicode-pair-for-filename-in-javascript>
     - <https://stackoverflow.com/questions/61801645/web-extension-code-to-download-file-works-in-chrome-but-fails-in-firefox-with-i>
-- [ ] Make it work on plain image URLs
+- [x] Make it work on plain image URLs
     - <https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Birthday_Paradox.svg/1024px-Birthday_Paradox.svg.png>
 
 Lower priority
