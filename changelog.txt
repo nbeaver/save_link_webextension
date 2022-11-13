@@ -1,0 +1,19 @@
+0.3.0, Nov 12, 2022
+Better filename sanitizing: strips out zero-width joiner and no-break space.
+
+0.2.0, Oct 14, 2019
+Generated link files now have a proper HTML5 DOCTYPE.
+
+Icon has white background for better visibility in dark themes.
+
+0.1.3, Jun 25, 2019
+Clarify description to match product page
+
+0.1.2, Mar 16, 2019
+Add space between 0 and URL to make HTML validators happy.
+
+0.1.1, Dec 17, 2018
+Better filename sanitizing.
+
+0.1, Nov 26, 2018
+Initial release.
