@@ -1,3 +1,6 @@
+0.3.1, Nov 12, 2022
+Even more filename sanitizing: strip out variation selectors.
+
 0.3.0, Nov 12, 2022
 Better filename sanitizing: strips out zero-width joiner and no-break space.
 
