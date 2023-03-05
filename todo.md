@@ -23,6 +23,7 @@
     - <https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Birthday_Paradox.svg/1024px-Birthday_Paradox.svg.png>
 - [ ] Handle filename sanitizing like SingleFile
     - <https://github.com/gildas-lormeau/SingleFile/blob/911dd7e699fa9818c18320219dba414423156005/src/core/bg/download-util.js>
+- [ ] Make it work on nbsp, e.g. <https://twitter.com/fortysevenfx/status/1599483273864187904>
 
 Lower priority
 
