@@ -11,6 +11,14 @@
     "activeTab",
     "downloads"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{716de2f2-af55-4079-a000-f0419ebccb41}",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
   "browser_action": {
     "default_icon": "icons/icon.svg",
     "default_title": "Save a link"
