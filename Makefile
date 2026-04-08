@@ -8,7 +8,12 @@ $(ZIP): generate_link.js manifest.json icons/icon.svg
 
 .PHONY : lint
 lint :
-	gjslint --nojsdoc generate_link.js
+	npm exec -- web-ext lint
+	#gjslint --nojsdoc generate_link.js
+
+.PHONY: install-npm
+install-npm:
+	npm install web-ext
 
 .PHONY : clean
 clean :
