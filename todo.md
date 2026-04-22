@@ -24,6 +24,8 @@
 - [ ] Handle filename sanitizing like SingleFile
     - <https://github.com/gildas-lormeau/SingleFile/blob/911dd7e699fa9818c18320219dba414423156005/src/core/bg/download-util.js>
 - [ ] Make it work on nbsp, e.g. <https://twitter.com/fortysevenfx/status/1599483273864187904>
+- [ ] Make filename customizable
+  - e.g. like https://github.com/garoose/copy-message-id/blob/master/options/options.html
 
 Lower priority
 
