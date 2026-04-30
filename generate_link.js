@@ -24,7 +24,7 @@ function generateLink(tab) {
   }
   function parseURL(URL) {
     var newAnchor = document.createElement('a');
-    newAnchor.href = tab.url;
+    newAnchor.href = URL;
     return newAnchor;
   }
   function sanitizeFilename(filename) {
