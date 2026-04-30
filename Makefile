@@ -20,6 +20,10 @@ install-npm:
 	npm clean-install
 	# npm install web-ext eslint
 
+.PHONY: outdated-npm
+outdated-npm:
+	npm outdated
+
 .PHONY: update-npm
 update-npm:
 	npm update
