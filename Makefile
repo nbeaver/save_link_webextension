@@ -17,7 +17,8 @@ lint-js:
 
 .PHONY: install-npm
 install-npm:
-	npm install web-ext
+	npm clean-install
+	# npm install web-ext eslint
 
 .PHONY : clean
 clean :
