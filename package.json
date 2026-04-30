@@ -1,5 +1,6 @@
 {
   "dependencies": {
     "web-ext": "^9.4.0"
-  }
+  },
+  "version": "0.0.1"
 }
