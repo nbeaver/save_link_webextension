@@ -20,6 +20,10 @@ install-npm:
 	npm clean-install
 	# npm install web-ext eslint
 
+.PHONY: update-npm
+update-npm:
+	npm update
+
 .PHONY : clean
 clean :
 	rm -f -- $(ZIP)
