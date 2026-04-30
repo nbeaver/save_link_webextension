@@ -11,6 +11,10 @@ lint :
 	npm exec -- web-ext lint
 	#gjslint --nojsdoc generate_link.js
 
+.PHONY: lint-js
+lint-js:
+	npm exec -- eslint "**/*.js"
+
 .PHONY: install-npm
 install-npm:
 	npm install web-ext
