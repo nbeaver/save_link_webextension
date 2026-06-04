@@ -28,6 +28,12 @@ outdated-npm:
 update-npm:
 	npm update
 
+IGNORE:=changelog.txt eslint.config.mjs issues/ LICENSE.txt $(wildcard *.desktop) $(wildcard *.zip) $(wildcard *.md) $(wildcard *.rst) $(wildcard *.json) Makefile mozilla-addon-product-page/ node_modules/ relevant-links/ tests/
+.PHONY: web-ext-build
+web-ext-build :
+	npm exec -- web-ext build --ignore-files $(IGNORE)
+
+
 .PHONY : clean
 clean :
 	rm -f -- $(ZIP)
