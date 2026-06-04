@@ -33,6 +33,13 @@ IGNORE:=changelog.txt eslint.config.mjs issues/ LICENSE.txt $(wildcard *.desktop
 web-ext-build :
 	npm exec -- web-ext build --overwrite-dest --ignore-files $(IGNORE)
 
+.PHONY: web-ext-lint
+web-ext-lint :
+	npm exec -- web-ext lint
+
+.PHONY: lint-web-ext
+lint-web-ext: web-ext-lint
+
 
 .PHONY : clean
 clean :
