@@ -1,3 +1,7 @@
+0.3.2, Jun 4, 2026
+Yet more filename sanitizing: byte-order marking (BOM) and narrow non-breaking
+space.
+
 0.3.1, Nov 12, 2022
 Even more filename sanitizing: strip out variation selectors.
 

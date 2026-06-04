@@ -23,8 +23,8 @@
     - <https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Birthday_Paradox.svg/1024px-Birthday_Paradox.svg.png>
 - [ ] Handle filename sanitizing like SingleFile
     - <https://github.com/gildas-lormeau/SingleFile/blob/911dd7e699fa9818c18320219dba414423156005/src/core/bg/download-util.js>
-- [ ] Make it work on nbsp, e.g. <https://twitter.com/fortysevenfx/status/1599483273864187904>
-- [ ] Make it work on <feff> e.g. “﻿Magnifica Humanitas,” Pope Leo XIV’s first encyclical - Opus Dei https://opusdei.org/en/article/encyclical-magnifica-humanitas-pope-leo-xiv-work-ai/
+- [x] Make it work on nbsp, e.g. <https://twitter.com/fortysevenfx/status/1599483273864187904>
+- [x] Make it work on <feff> e.g. “﻿Magnifica Humanitas,” Pope Leo XIV’s first encyclical - Opus Dei https://opusdei.org/en/article/encyclical-magnifica-humanitas-pope-leo-xiv-work-ai/
 - [ ] Make filename customizable
   - e.g. like https://github.com/garoose/copy-message-id/blob/master/options/options.html
 
