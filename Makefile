@@ -31,7 +31,7 @@ update-npm:
 IGNORE:=changelog.txt eslint.config.mjs issues/ LICENSE.txt $(wildcard *.desktop) $(wildcard *.zip) $(wildcard *.md) $(wildcard *.rst) package-lock.json package.json Makefile mozilla-addon-product-page/ node_modules/ relevant-links/ tests/
 .PHONY: web-ext-build
 web-ext-build :
-	npm exec -- web-ext build --ignore-files $(IGNORE)
+	npm exec -- web-ext build --overwrite-dest --ignore-files $(IGNORE)
 
 
 .PHONY : clean
