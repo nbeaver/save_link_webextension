@@ -37,10 +37,14 @@ function generateLink(tab) {
                      .replace(/[\x00-\x1f\x7f-\x9f:*?|"<>;,+=\[\]]+/g, '_')
                      .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, '_')
                      .replace(/[\uFE00-\uFE0F]/g, '') // variation selectors
+                     .replace(/\uFEFF/g, '') // byte-order mark (BOM) a.k.a ZERO WIDTH NO-BREAK SPACE
                      .replace(/\u200D/g, '') // zero-width joiner
-                     .replace(/\u00A0/g, ' '); // no -break space
+                     .replace(/\u00A0/g, ' ') // non-breaking space
+                     .replace(/\u202F/g, ' '); // narrow non-breaking space
   }
   // https://searchfox.org/mozilla-central/source/toolkit/components/downloads/DownloadPaths.jsm#68
+  // "extension is responsible for both making the filename valid, and catching errors when that fails."
+  //  https://bugzilla.mozilla.org/show_bug.cgi?id=1390473
   function getFilename(tab) {
     var hostname = parseURL(tab.url).hostname;
     var filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
