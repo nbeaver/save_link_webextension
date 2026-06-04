@@ -42,7 +42,7 @@ function generateLink(tab) {
                      .replace(/\u00A0/g, ' ') // non-breaking space
                      .replace(/\u202F/g, ' '); // narrow non-breaking space
   }
-  // https://searchfox.org/mozilla-central/source/toolkit/components/downloads/DownloadPaths.jsm#68
+  // https://searchfox.org/mozilla-esr91/rev/f3f439e007bdd4b5b1c2ba05ca706b68563413b2/toolkit/components/downloads/DownloadPaths.jsm#75
   // "extension is responsible for both making the filename valid, and catching errors when that fails."
   //  https://bugzilla.mozilla.org/show_bug.cgi?id=1390473
   function getFilename(tab) {
