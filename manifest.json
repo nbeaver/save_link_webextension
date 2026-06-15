@@ -1,29 +1,33 @@
 {
-  "name": "Save a link to the current tab",
-  "description": "Save an HTML file that links to the current tab.",
-  "manifest_version": 2,
-  "version": "0.3.2",
-  "icons": {
-    "48": "icons/icon.svg",
-    "96": "icons/icon.svg"
-  },
-  "permissions": [
-    "activeTab",
-    "downloads"
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{716de2f2-af55-4079-a000-f0419ebccb41}",
-      "data_collection_permissions": {
-        "required": ["none"]
-      }
-    }
+  "background": {
+    "scripts": [
+      "generate_link.js"
+    ]
   },
   "browser_action": {
     "default_icon": "icons/icon.svg",
     "default_title": "Save a link"
   },
-  "background": {
-    "scripts": ["generate_link.js"]
-  }
+  "browser_specific_settings": {
+    "gecko": {
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      },
+      "id": "{716de2f2-af55-4079-a000-f0419ebccb41}"
+    }
+  },
+  "description": "Save an HTML file that links to the current tab.",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "manifest_version": 2,
+  "name": "Save a link to the current tab",
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "version": "0.3.2"
 }
