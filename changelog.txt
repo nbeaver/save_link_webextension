@@ -1,3 +1,6 @@
+0.4.0, Jun 24, 2026
+Truncate filename if the title would make it too long.
+
 0.3.2, Jun 4, 2026
 Yet more filename sanitizing: byte-order marking (BOM) and narrow non-breaking
 space.
