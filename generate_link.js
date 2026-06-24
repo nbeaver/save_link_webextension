@@ -61,11 +61,11 @@ function generateLink(tab) {
   function getFilename(tab) {
     let hostname = parseURL(tab.url).hostname;
     const prefix = 'link-to-';
-    let filename = prefix + tab.title + '_' + hostname;
+    let filename = prefix + tab.title
     filename = sanitizeFilename(filename); // might produce more spaces and underscores
     filename = filename.split(' ').join('_'); // replace spaces with underscores
-    filename = filename.replace(/_+/g, '_');
-    const suffix = '.link.html';
+    filename = filename.replace(/_+/g, '_'); // suppress repeated underscores
+    const suffix = '_' + hostname + '.link.html';
     const suffix_bytes = new Blob([suffix]).size;
     // On Linux ext4 NAME_MAX is 255 bytes, on Windows it is 255 characters.
     // However empirically browser.downloads.download will fail when filename
@@ -75,6 +75,7 @@ function generateLink(tab) {
     filename += suffix;
     // sanitize again in case suffix or truncation produces invalid input.
     filename = sanitizeFilename(filename);
+    filename = filename.replace(/_+/g, '_'); // suppress repeated underscores
     // console.log(`filename = ${JSON.stringify(filename)}`);
     // let filename_bytes =  new Blob([filename]).size;
     // console.log(`filename_bytes = ${filename_bytes}`);
