@@ -9,11 +9,11 @@ $(ZIP): generate_link.js manifest.json icons/icon.svg
 .PHONY : lint
 lint :
 	npm exec -- web-ext lint
-	#gjslint --nojsdoc generate_link.js
 
 .PHONY: lint-js
 lint-js:
 	npm exec -- eslint "**/*.js"
+	#gjslint --nojsdoc generate_link.js
 
 .PHONY: install-npm
 install-npm:
