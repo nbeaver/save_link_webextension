@@ -38,9 +38,13 @@ function generateLink(tab) {
                      .replace(/^[\s\u180e.]+|[\s\u180e.]+$/g, '_')
                      .replace(/[\uFE00-\uFE0F]/g, '') // variation selectors
                      .replace(/\uFEFF/g, '') // byte-order mark (BOM) a.k.a ZERO WIDTH NO-BREAK SPACE
+                     .replace(/\u200C/g, '') // zero-width non-joiner
                      .replace(/\u200D/g, '') // zero-width joiner
+                     .replace(/\u200E/g, '') // left-to-right mark
+                     .replace(/\u200F/g, '') // right-to-left mark
                      .replace(/\u00A0/g, ' ') // non-breaking space
-                     .replace(/\u202F/g, ' '); // narrow non-breaking space
+                     .replace(/\u202F/g, ' ') // narrow non-breaking space
+                     .replace(/\uFFFD/g, '_'); // replacement character
   }
   // https://searchfox.org/mozilla-esr91/rev/f3f439e007bdd4b5b1c2ba05ca706b68563413b2/toolkit/components/downloads/DownloadPaths.jsm#75
   // "extension is responsible for both making the filename valid, and catching errors when that fails."
@@ -48,8 +52,8 @@ function generateLink(tab) {
   function getFilename(tab) {
     var hostname = parseURL(tab.url).hostname;
     var filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
-    filename = filename.split(' ').join('_');
     filename = sanitizeFilename(filename);
+    filename = filename.split(' ').join('_');
     return filename;
   }
   var payload = createRedirectHTML(tab.url, tab.title);
