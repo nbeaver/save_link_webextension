@@ -49,11 +49,35 @@ function generateLink(tab) {
   // https://searchfox.org/mozilla-esr91/rev/f3f439e007bdd4b5b1c2ba05ca706b68563413b2/toolkit/components/downloads/DownloadPaths.jsm#75
   // "extension is responsible for both making the filename valid, and catching errors when that fails."
   //  https://bugzilla.mozilla.org/show_bug.cgi?id=1390473
+  function truncateFilename(filename, n_bytes) {
+    var encoder = new TextEncoder();
+    var decoder = new TextDecoder('utf-8');
+    var filename_uint8 = encoder.encode(filename);
+    var truncated_uint8 = filename_uint8.slice(0, n_bytes);
+    var truncated = decoder.decode(truncated_uint8);
+    return truncated;
+  }
+  // https://stackoverflow.com/questions/57769465/javascript-truncate-text-by-bytes-length
   function getFilename(tab) {
-    var hostname = parseURL(tab.url).hostname;
-    var filename = 'link-to-' + tab.title + '_' + hostname + '.link.html';
+    let hostname = parseURL(tab.url).hostname;
+    const prefix = 'link-to-';
+    let filename = prefix + tab.title + '_' + hostname;
+    filename = sanitizeFilename(filename); // might produce more spaces and underscores
+    filename = filename.split(' ').join('_'); // replace spaces with underscores
+    filename = filename.replace(/_+/g, '_');
+    const suffix = '.link.html';
+    const suffix_bytes = new Blob([suffix]).size;
+    // On Linux ext4 NAME_MAX is 255 bytes, on Windows it is 255 characters.
+    // However empirically browser.downloads.download will fail when filename
+    // has more than 250 bytes. I'm not sure why this is.
+    const bytes_max = 250;
+    filename = truncateFilename(filename, bytes_max - suffix_bytes);
+    filename += suffix;
+    // sanitize again in case suffix or truncation produces invalid input.
     filename = sanitizeFilename(filename);
-    filename = filename.split(' ').join('_');
+    // console.log(`filename = ${JSON.stringify(filename)}`);
+    // let filename_bytes =  new Blob([filename]).size;
+    // console.log(`filename_bytes = ${filename_bytes}`);
     return filename;
   }
   var payload = createRedirectHTML(tab.url, tab.title);
